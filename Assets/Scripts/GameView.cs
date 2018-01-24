@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Navigation : MonoBehaviour {
+public class GameView : MonoBehaviour {
 
     public enum MenuStates
     {
@@ -28,24 +28,26 @@ public class Navigation : MonoBehaviour {
         personalDataMenu.SetActive(currenteState == MenuStates.PersonalData);
     }
 
+    #region OnClicks
     public void OnPreparerParcours()
     {
-        setCurrentState(MenuStates.PersonalData);
+        SetCurrentState(MenuStates.PersonalData);
     }
 
     public void OnBackMainMenu()
     {
-        setCurrentState(MenuStates.Main);
+        SetCurrentState(MenuStates.Main);
     }
 
-    public void setCurrentState(MenuStates state)
+    public void SetCurrentState(MenuStates state)
     {
-        StartCoroutine(buttonDelay(state));
+        StartCoroutine(MenuButtonDelay(state));
     }
 
-    IEnumerator buttonDelay(MenuStates state)
+    IEnumerator MenuButtonDelay(MenuStates state)
     {
         yield return new WaitForSeconds(0.3f);
         currenteState = state;
     }
+    #endregion
 }
