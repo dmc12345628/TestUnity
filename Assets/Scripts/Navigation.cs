@@ -30,11 +30,22 @@ public class Navigation : MonoBehaviour {
 
     public void OnPreparerParcours()
     {
-        currenteState = MenuStates.PersonalData;
+        setCurrentState(MenuStates.PersonalData);
     }
 
     public void OnBackMainMenu()
     {
-        currenteState = MenuStates.Main;
+        setCurrentState(MenuStates.Main);
+    }
+
+    public void setCurrentState(MenuStates state)
+    {
+        StartCoroutine(buttonDelay(state));
+    }
+
+    IEnumerator buttonDelay(MenuStates state)
+    {
+        yield return new WaitForSeconds(0.3f);
+        currenteState = state;
     }
 }
