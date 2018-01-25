@@ -44,5 +44,9 @@ public class PersonalDataMenu : MonoBehaviour {
         selectedSex = Sex.Female;
     }
 
+	public void OnValidClick()
+	{
+		Application.LoadLevel ("TestAR");	
+	}
     #endregion
 }

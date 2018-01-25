@@ -288,7 +288,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 745b870c1fc9e4242ab8629456e5be1a, type: 2}
+  - {fileID: 2100000, guid: ef08113b2b5fe4e47ba4c772d50a3ffa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MarkerType: 0
-  Tag: marker01
+  Tag: 
   PatternFilenameIndex: 5
   PatternFilename: patt.markerPeluchon02
   PatternContents: " 168 171 172 173 173 175 175 176 175 167  66  97 174 152  95 170\n
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToRemainVisible: 0
   eventReceiver: {fileID: 0}
-  _markerTag: marker01
+  _markerTag: 
 --- !u!1 &1590157176
 GameObject:
   m_ObjectHideFlags: 0
