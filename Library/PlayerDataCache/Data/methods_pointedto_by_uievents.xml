@@ -1,0 +1,13 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="PersonalDataMenu">
+			<method name="OnValidClick"/>
+			<method name="OnFemaleClick"/>
+			<method name="OnMaleClick"/>
+		</type>
+		<type fullname="GameView">
+			<method name="OnPreparerParcours"/>
+			<method name="OnBackMainMenu"/>
+		</type>
+	</assembly>
+</linker>
