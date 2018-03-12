@@ -6,26 +6,29 @@ public class CameraView : MonoBehaviour {
 
 	public enum MenuStates
 	{
-		CameraView,
+		GameView,
 		GameMenu,
-		PauseMenu
+		PauseMenu,
+		ConfirmDialog
 	}
 	public MenuStates currenteState;
 
-	public GameObject cameraView;
-	public GameObject gameMenu;
+	public GameObject gameView;
+	//public GameObject gameMenu;
 	public GameObject pauseMenu;
+	public GameObject confirmDialog;
 
 	// Use this for initialization
 	void Start () {
-		currenteState = MenuStates.CameraView;
+		currenteState = MenuStates.GameView;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		cameraView.SetActive (currenteState == MenuStates.CameraView);
-		gameMenu.SetActive (currenteState == MenuStates.GameMenu);
+		gameView.SetActive (currenteState == MenuStates.GameView);
+		//gameMenu.SetActive (currenteState == MenuStates.GameMenu);
 		pauseMenu.SetActive (currenteState == MenuStates.PauseMenu);
+		confirmDialog.SetActive (currenteState == MenuStates.ConfirmDialog);
 	}
 
 	#region OnClicks
@@ -34,10 +37,28 @@ public class CameraView : MonoBehaviour {
 		SetCurrentState (MenuStates.PauseMenu);
 	}
 
+	public void OnResumeGame() 
+	{
+		SetCurrentState (MenuStates.GameView);
+	}
+
 	public void OnBackMainScene()
 	{
-		Application.LoadLevel ("MainScene");	
+		SetCurrentState (MenuStates.ConfirmDialog);
 	}
+
+	#region OnClicksDialog
+	public void OnAcceptDialog()
+	{
+		Application.LoadLevel ("MainScene");
+	}
+
+	public void OnCancelDialog()
+	{
+		SetCurrentState (MenuStates.PauseMenu);
+	}
+
+	#endregion
 
 	public void SetCurrentState(MenuStates state)
 	{
