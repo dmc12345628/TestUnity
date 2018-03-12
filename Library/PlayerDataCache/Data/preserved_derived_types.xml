@@ -37,6 +37,7 @@
 <type fullname="UnityStandardAssets.Utility.WaypointProgressTracker" preserve="all"/>
 </assembly>
 <assembly fullname="Assembly-CSharp">
+<type fullname="MaterialInputField" preserve="all"/>
 <type fullname="ARCamera" preserve="all"/>
 <type fullname="ARController" preserve="all"/>
 <type fullname="ARMarker" preserve="all"/>
@@ -45,9 +46,10 @@
 <type fullname="ARTrackedObject" preserve="all"/>
 <type fullname="ARTransitionalCamera" preserve="all"/>
 <type fullname="Animations" preserve="all"/>
+<type fullname="CameraView" preserve="all"/>
 <type fullname="ClickSound" preserve="all"/>
 <type fullname="GameView" preserve="all"/>
-<type fullname="PersonalDataMenu" preserve="all"/>
+<type fullname="PersonalInformation" preserve="all"/>
 <type fullname="SpinningCube" preserve="all"/>
 </assembly>
 <assembly fullname="UnityEngine.UI">

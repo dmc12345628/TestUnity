@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PersonalDataMenu : MonoBehaviour {
+public class PersonalInformation : MonoBehaviour {
 
     #region attributes
     public Animator btnMaleAnimator;
@@ -13,12 +14,12 @@ public class PersonalDataMenu : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        selectedSex = Sex.Male;
+        SELECTED_SEX = Sex.Male;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        bool isMale = selectedSex == Sex.Male;
+        bool isMale = SELECTED_SEX == Sex.Male;
         btnMaleAnimator.SetBool("SELECTED", isMale);
         MaleAnimator.SetBool("SELECTED", isMale);
         btnFemaleAnimator.SetBool("SELECTED", !isMale);
@@ -27,32 +28,47 @@ public class PersonalDataMenu : MonoBehaviour {
 
     #region Form Personal Data
 
-    public string nomDeLenfant;
+	public static string NO_DE_LENFANT;
+	public static string AGE_DE_LENFANT;
+
     public enum Sex
     {
         Male,
         Female
-    }
-    public Sex selectedSex;
+	}
 
-    public void OnNomChange(string nom)
-    {
-        nomDeLenfant = nom;
-    }
+	public static Sex SELECTED_SEX;
+    public static bool OPERATION_PROGRAMMEE;
+
+	public void OnNomChange(string newNom)
+	{
+		NO_DE_LENFANT = newNom;
+	}
+
+	public void OnAgeChange(string newAge)
+	{
+		AGE_DE_LENFANT = newAge;
+	}
 
     public void OnMaleClick()
     {
-        selectedSex = Sex.Male;
+        SELECTED_SEX = Sex.Male;
     }
 
     public void OnFemaleClick()
     {
-        selectedSex = Sex.Female;
+        SELECTED_SEX = Sex.Female;
+    }
+
+    public void OnToogleOperationProgrammee(bool state) 
+    {
+        OPERATION_PROGRAMMEE = state;
     }
 
 	public void OnValidClick()
 	{
-		Application.LoadLevel("TestAR");	
+        //Application.LoadLevel("TestAR");
+		SceneManager.LoadScene("TestAR", LoadSceneMode.Single);
 	}
     #endregion
 }
