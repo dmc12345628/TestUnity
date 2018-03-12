@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PersonalInformation : MonoBehaviour {
 
@@ -10,8 +10,6 @@ public class PersonalInformation : MonoBehaviour {
     public Animator btnFemaleAnimator;
     public Animator MaleAnimator;
     public Animator FemaleAnimator;
-	public InputField infNomDeLenfant;
-	public InputField infAge;
     #endregion
 
     // Use this for initialization
@@ -40,16 +38,15 @@ public class PersonalInformation : MonoBehaviour {
 	}
 
 	public static Sex SELECTED_SEX;
+    public static bool OPERATION_PROGRAMMEE;
 
-	public void OnNomChange()
+	public void OnNomChange(string newNom)
 	{
-		string newNom = infNomDeLenfant.text;
 		NO_DE_LENFANT = newNom;
 	}
 
-	public void OnAgeChange()
+	public void OnAgeChange(string newAge)
 	{
-		string newAge = infAge.text;
 		AGE_DE_LENFANT = newAge;
 	}
 
@@ -63,9 +60,14 @@ public class PersonalInformation : MonoBehaviour {
         SELECTED_SEX = Sex.Female;
     }
 
+    public void OnToogleOperationProgrammee(bool state) 
+    {
+        OPERATION_PROGRAMMEE = state;
+    }
+
 	public void OnValidClick()
 	{
-		Application.LoadLevel("TestAR");	
+		SceneManager.LoadScene("TestAR", LoadSceneMode.Single);
 	}
     #endregion
 }
