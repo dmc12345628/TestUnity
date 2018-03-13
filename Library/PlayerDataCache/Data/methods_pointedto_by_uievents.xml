@@ -2,10 +2,7 @@
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="PersonalInformation">
 			<method name="OnValidClick"/>
-			<method name="OnNomChange"/>
-			<method name="OnToogleOperationProgrammee"/>
 			<method name="OnFemaleClick"/>
-			<method name="OnAgeChange"/>
 			<method name="OnMaleClick"/>
 		</type>
 		<type fullname="GameView">

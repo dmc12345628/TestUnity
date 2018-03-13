@@ -28,7 +28,7 @@ public class CameraView : MonoBehaviour {
 	void Update () {
 		gameView.SetActive (currenteState == MenuStates.GameView);
 		//gameMenu.SetActive (currenteState == MenuStates.GameMenu);
-		pauseMenu.SetActive (currenteState == MenuStates.PauseMenu);
+		pauseMenu.SetActive (currenteState == MenuStates.PauseMenu || currenteState == MenuStates.ConfirmDialog);
 		confirmDialog.SetActive (currenteState == MenuStates.ConfirmDialog);
 	}
 
