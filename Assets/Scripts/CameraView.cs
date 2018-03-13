@@ -42,7 +42,7 @@ public class CameraView : MonoBehaviour {
 		SetCurrentState (MenuStates.GameView);
 	}
 
-	public void OnBackMainScene()
+	public void OnStopGame()
 	{
 		SetCurrentState (MenuStates.ConfirmDialog);
 	}
