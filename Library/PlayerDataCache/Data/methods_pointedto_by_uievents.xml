@@ -2,7 +2,10 @@
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="PersonalInformation">
 			<method name="OnValidClick"/>
+			<method name="OnNomChange"/>
+			<method name="OnToogleOperationProgrammee"/>
 			<method name="OnFemaleClick"/>
+			<method name="OnAgeChange"/>
 			<method name="OnMaleClick"/>
 		</type>
 		<type fullname="GameView">
@@ -10,7 +13,11 @@
 			<method name="OnBackMainMenu"/>
 		</type>
 		<type fullname="CameraView">
-			<method name="OnBackMainScene"/>
+			<method name="OnCancelDialog"/>
+			<method name="OnAcceptDialog"/>
+			<method name="OnResumeGame"/>
+			<method name="OnStopGame"/>
+			<method name="OnPauseGame"/>
 		</type>
 	</assembly>
 </linker>

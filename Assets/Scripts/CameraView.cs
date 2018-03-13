@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraView : MonoBehaviour {
 
@@ -50,7 +51,7 @@ public class CameraView : MonoBehaviour {
 	#region OnClicksDialog
 	public void OnAcceptDialog()
 	{
-		Application.LoadLevel ("MainScene");
+		SceneManager.LoadScene("MainScene");
 	}
 
 	public void OnCancelDialog()

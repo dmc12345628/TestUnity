@@ -67,8 +67,7 @@ public class PersonalInformation : MonoBehaviour {
 
 	public void OnValidClick()
 	{
-        //Application.LoadLevel("TestAR");
-		SceneManager.LoadScene("TestAR", LoadSceneMode.Single);
+		SceneManager.LoadScene("TestAR");
 	}
     #endregion
 }
