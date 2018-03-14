@@ -38,6 +38,12 @@ public class CameraView : MonoBehaviour {
 		if (currenteState == MenuStates.ConfirmDialog) {
 			confirmDialog.SetActive (true);
 			confirmDialogAnimator.SetBool ("SHOW", true);
+		} else {
+			if (confirmDialog.activeSelf) {
+				confirmDialogAnimator.SetBool ("SHOW", false);
+				Debug.Log ("SHOW" + confirmDialogAnimator.GetBool ("SHOW"));
+				HideConfirmDialog ();
+			}
 		}
 	}
 
@@ -65,10 +71,6 @@ public class CameraView : MonoBehaviour {
 
 	public void OnCancelDialog()
 	{
-		//HideConfirmDialog ();
-
-		Debug.Log ("SHOW FALSE");
-		confirmDialogAnimator.SetBool ("SHOW", false);
 		SetCurrentState (MenuStates.PauseMenu);
 	}
 
@@ -91,7 +93,7 @@ public class CameraView : MonoBehaviour {
 	}
 
 	IEnumerator HideConfirmDialogDelay() {
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (0.3f);
 		confirmDialog.SetActive (false);
 	}
 	#endregion
