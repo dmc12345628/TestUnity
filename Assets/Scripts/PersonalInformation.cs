@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PersonalInformation : MonoBehaviour {
 
-    #region attributes
+    #region animators
     public Animator btnMaleAnimator;
     public Animator btnFemaleAnimator;
     public Animator MaleAnimator;
