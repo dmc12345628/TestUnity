@@ -9,12 +9,24 @@
 			<method name="OnPreparerParcours"/>
 			<method name="OnBackMainMenu"/>
 		</type>
+<<<<<<< HEAD
 		<type fullname="CameraView">
 			<method name="OnCancelDialog"/>
 			<method name="OnAcceptDialog"/>
 			<method name="OnResumeGame"/>
 			<method name="OnStopGame"/>
 			<method name="OnPauseGame"/>
+=======
+		<type fullname="DialogueTrigger">
+			<method name="TriggerDialogue"/>
+			<method name="TriggerDialogue"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+>>>>>>> feature/RencontreDeNouveauxAmis
 		</type>
 	</assembly>
 </linker>
