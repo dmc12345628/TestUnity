@@ -10,7 +10,11 @@
 			<method name="OnBackMainMenu"/>
 		</type>
 		<type fullname="CameraView">
-			<method name="OnBackMainScene"/>
+			<method name="OnCancelDialog"/>
+			<method name="OnAcceptDialog"/>
+			<method name="OnResumeGame"/>
+			<method name="OnStopGame"/>
+			<method name="OnPauseGame"/>
 		</type>
 	</assembly>
 </linker>

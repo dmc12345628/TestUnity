@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestAR.unity
     guid: 0044949f2381e104f98b04b13a3dfbee
+  - enabled: 1
+    path: Assets/Scenes/PauseMenu.unity
+    guid: a55dbeacb49b1b34ba898d88e95fa46d
