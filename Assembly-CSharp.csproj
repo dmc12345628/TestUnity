@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\CameraView.cs" />
      <Compile Include="Assets\Scripts\ClickSound.cs" />
      <Compile Include="Assets\Scripts\GameView.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PersonalInformation.cs" />
      <Compile Include="Assets\Scripts\SpinningCube.cs" />
      <None Include="Assets\ARToolKit5-Unity\Resources\ardata\markers\patt.markerPeluchon02.txt" />

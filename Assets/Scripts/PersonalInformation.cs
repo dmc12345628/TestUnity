@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PersonalInformation : MonoBehaviour {
@@ -11,6 +12,12 @@ public class PersonalInformation : MonoBehaviour {
     public Animator MaleAnimator;
     public Animator FemaleAnimator;
     #endregion
+
+	#region form widgets
+	public InputField infNomDeLenfant;
+	public InputField infAge;
+	public Toggle tglOperation;
+	#endregion
 
     // Use this for initialization
     void Start () {
@@ -28,7 +35,7 @@ public class PersonalInformation : MonoBehaviour {
 
     #region Form Personal Data
 
-	public static string NO_DE_LENFANT;
+	public static string NOM_DE_LENFANT;
 	public static string AGE_DE_LENFANT;
 
     public enum Sex
@@ -40,34 +47,22 @@ public class PersonalInformation : MonoBehaviour {
 	public static Sex SELECTED_SEX;
     public static bool OPERATION_PROGRAMMEE;
 
-	public void OnNomChange(string newNom)
+	public void OnMaleClick()
 	{
-		NO_DE_LENFANT = newNom;
+		SELECTED_SEX = Sex.Male;
 	}
 
-	public void OnAgeChange(string newAge)
+	public void OnFemaleClick()
 	{
-		AGE_DE_LENFANT = newAge;
+		SELECTED_SEX = Sex.Female;
 	}
-
-    public void OnMaleClick()
-    {
-        SELECTED_SEX = Sex.Male;
-    }
-
-    public void OnFemaleClick()
-    {
-        SELECTED_SEX = Sex.Female;
-    }
-
-    public void OnToogleOperationProgrammee(bool state) 
-    {
-        OPERATION_PROGRAMMEE = state;
-    }
 
 	public void OnValidClick()
 	{
-		SceneManager.LoadScene("TestAR");
+		NOM_DE_LENFANT = infNomDeLenfant.text;
+		AGE_DE_LENFANT = infAge.text;
+		OPERATION_PROGRAMMEE = tglOperation.enabled;
+		SceneManager.LoadScene("PauseMenu");
 	}
     #endregion
 }
