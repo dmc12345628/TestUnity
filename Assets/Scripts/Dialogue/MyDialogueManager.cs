@@ -8,23 +8,23 @@ public class MyDialogueManager : MonoBehaviour {
     public Text nameText;
     public Text dialogueText;
 
-    private Queue<string> sentences;
+    private Queue</*DialogueSentences*/string> sentences;
 
 	void Start () {
-        sentences = new Queue<string>();
+        sentences = new Queue</*DialogueSentences*/string>();
 	}
 
     public void StartDialogue (Dialogue dialogue)
     {
-        Debug.Log("Starting conversation with " + dialogue.name);
+        
 
-        //nameText.text = dialogue.name;
+       
 
         sentences.Clear();
 
-        foreach(string sentence in dialogue.sentences)
+        foreach(/*DialogueSentences*/string dialogueSentence in dialogue.sentences)
         {
-            sentences.Enqueue(sentence);
+            sentences.Enqueue(dialogueSentence);
         }
 
 
@@ -41,8 +41,19 @@ public class MyDialogueManager : MonoBehaviour {
             return;
         }
 
-        string sentence = sentences.Dequeue();
-        dialogueText.text = sentence; 
+        /*DialogueSentences*/string dialogueSentence = sentences.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(dialogueSentence));
+    }
+
+    IEnumerator TypeSentence (string dialogueSentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in dialogueSentence./*sentence.*/ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null;
+        }
     }
 	
 

@@ -9,5 +9,15 @@
 			<method name="OnPreparerParcours"/>
 			<method name="OnBackMainMenu"/>
 		</type>
+		<type fullname="DialogueTrigger">
+			<method name="TriggerDialogue"/>
+			<method name="TriggerDialogue"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+		</type>
 	</assembly>
 </linker>
