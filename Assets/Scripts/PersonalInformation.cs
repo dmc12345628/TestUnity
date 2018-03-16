@@ -62,7 +62,7 @@ public class PersonalInformation : MonoBehaviour {
 		NOM_DE_LENFANT = infNomDeLenfant.text;
 		AGE_DE_LENFANT = infAge.text;
 		OPERATION_PROGRAMMEE = tglOperation.isOn;
-		SceneManager.LoadScene("PauseMenu");
+		SceneManager.LoadScene("GameScene");
 	}
     #endregion
 }
